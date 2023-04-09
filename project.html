@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>陳繼禾的網站</title>
+    <link rel="stylesheet" href="new.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <!--網站標籤開始-->
+    <link rel="icon" href="image/me4.png" type="image/png">    
+    <!--網站標籤結束-->
+    <script>
+        /*進度條開始*/
+        window.onload = function() {
+        move("progress-1", 0, 75);
+        move("progress-2", 0, 85);
+        move("progress-3", 0, 50);
+        move("progress-4", 0, 80);
+
+        };
+
+        function move(id, startValue, endValue) {
+        var progressBar = document.getElementById(id);
+        var progressLabel = progressBar.nextElementSibling;
+        var currentValue = startValue;
+        var intervalId = setInterval(frame, 40);
+
+        function frame() {
+            if (currentValue >= endValue) {
+            clearInterval(intervalId);
+            } else {
+            currentValue++;
+            progressBar.value = currentValue;
+            progressLabel.innerHTML = currentValue + "%";
+            }
+        }
+        }
+        /*進度條結束*/
+        /*幻燈片開始*/
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+        showSlides((slideIndex += n));
+        }
+
+        function currentSlide(n) {
+        showSlides((slideIndex = n));
+        }
+
+        function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+
+        if (n > slides.length) {
+            slideIndex = 1;
+        }
+
+        if (n < 1) {
+            slideIndex = slides.length;
+        }
+
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        }
+
+
+
+        /*幻燈片結束*/   
+        
+        /*移動視窗開始*/
+        window.addEventListener('scroll', function() {
+             var box = document.getElementById('floating-box');
+            box.style.top = (window.pageYOffset + window.innerHeight - box.offsetHeight - 40) + 'px';
+            });
+        /*移動視窗結束*/
+
+    </script>
+
+</head>
+<body>
+    <main>
+        <div id="floating-box">
+            <a href="https://instagram.com/gere_chen?igshid=YmMyMTA2M2Y=" target="_blank">
+                <img src="image/ig.jpg" width="50px"><br>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100008107386734" target="_blank">
+                <img src="image/fb.jpg" width="50px">
+            </a>
+            <a href="#top">
+                <img src="image/箭頭.jpg" width="50px">
+            </a>
+
+        </div>
+
+
+        <div class="lego">
+            <div class="a">
+                <a name="top">
+                    <h1>陳繼禾的網站</h1>
+                </a>
+                <nav>
+                    <a href="#intro"><h2>Introdution</h2></a>
+                    <a href="#can"><h2>What can I do</h2></a>
+                    <a href="#where"><h2>Where I grew</h2></a>
+                    <a href="#do"><h2>What I do</h2></a>
+                </nav>
+            </div>
+        
+            <div class="b">
+                <a name="intro"><h1>Who am I?</h1></a>
+                    <ul>
+                        <li>姓名:陳繼禾</li><br>
+                        <li>年齡:20</li><br>
+                        <li>主修:資訊管理</li><br>
+                        <li>興趣:運動</li><br>
+                        <li>星座:水瓶座</li><br>
+                        <li>生日:2003/02/08</li><br>
+                        <li>獨生子</li>
+                    </ul>
+            </div>
+            <div class="c">
+                <h1>That's me</h1>
+                    <center><img src="image/me2.jpg" height=auto width="300"></center>
+            </div>
+
+            <div class="d">
+                <h1>FAVORITE NBA PLAYER:<br>KOBE BRYANT</h1><br>
+                <p>
+                <center><img src="image/kobe.jpg" height="300" width="400"></center>
+                </p>
+                <p style="font-weight: bold;">If you afraid of fail , then you probably going to fail.</>
+            </div>
+
+            <div class="lef">
+                <img src="image/3.png" width="350px";>
+            </div>
+            <div class="rig">
+                <img src="image/2.png" width="350px">
+            </div>
+            <div class="mid">
+                <p>
+                    我在大一時曾加入過排球系隊，也參加過新生盃，主要擔任攻擊手。<br>
+                    身為從小看NBA的小孩，籃球當然也是我最喜歡的球類之一!只要有空，我隨時都會和同學朋友相約來場鬥牛。<br>
+                    種種的運動經歷讓我有比別人更健康的身體，我也相當享受這種和別人同場比賽的氛圍。<br>
+                    較為靜態的撞球我也是稍有涉略，作為和父親在閒暇時的休閒娛樂，撞球可以不管天氣好壞，偶爾也會和同學去學校旁的撞球街消磨時間。</p>
+            </div>
+
+
+
+
+            <div class="e">
+                <a name="can">
+                    <div class="start">
+                        <h1>What can I do</h1>
+                    </div>
+                </a>
+                <ul>
+                    <li>cooking skill</li>
+                    <div class="progress-container">
+                        <progress id="progress-1" max="100" value="0"></progress>
+                        <p class="progress-label">Loading 1</p>
+                    </div>
+                    <li>sporting skill</li>
+                    <div class="progress-container">
+                        <progress id="progress-2" max="100" value="0"></progress>
+                        <p class="progress-label">Loading 2</p>
+                    </div>
+                    <li>coding skill</li>
+                    <div class="progress-container">
+                        <progress id="progress-3" max="100" value="0"></progress>
+                        <p class="progress-label">Loading 3</p>
+                    </div>
+                    <li>gaming skill</li>
+                    <div class="progress-container">
+                        <progress id="progress-4" max="100" value="0"></progress>
+                        <p class="progress-label">Loading 4</p>
+                    </div>
+
+                </ul>
+            </div>
+            <div class="f">
+                <h1>Photo</h1>
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                      <img src="image/snoke.jpg" style="width:100%">
+                    </div>
+                  
+                    <div class="mySlides fade">
+                      <img src="image/ball.jpg" style="width:100%">
+                    </div>
+                  
+                    <div class="mySlides fade">
+                      <img src="image/ball2.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="image/cake3.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="image/cake2.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="image/elden.jpg" style="width:100%">
+                    </div>
+
+
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                  </div>
+            </div>
+            <div class="line">
+                <a name="where">
+                    <div class="start">
+                        <h1>Where I grew</h1>
+                    </div>
+                </a>
+            </div>
+            <div class="g">
+                <h1>日新國小</h1>
+                <center>
+                    <img src="image/國小.jpg" width="400px">
+                </center>
+                <p>國小我讀的是離家很近的學校，雖然腹地不大，但帶給我無數難忘的回憶，以及一個美滿的童年。國小的生活總是那麼無憂無慮，整天和朋友嬉戲打鬧，也結交了幾個知己，可以說是最快樂的求學生涯。</p>
+            </div>
+            <div class="h">
+                <h1>成淵國高中</h1>
+                <center>
+                    <img src="image/國高.jpg" width="600px">
+                </center>
+                <p>國中的我依舊保持離家近的原則，這次記住國小的教訓，挑了成淵高中的附設國中，不僅地大，熱食部的食物更是好吃到不行。後來考上高中部，繼續享受這間學校的好。可以說我讀的學校都讀了六年。且都離家走路不用20分鐘。</p>
+            </div>
+            <div class="i">
+                <h1>中原大學</h1>
+                <center>
+                    <img src="image/大學.jpg" width="400px">
+                </center>
+                <p>我的大學生涯還是個現在進行式，到我做這個網站時已然過了兩年，有時很辛苦(做專案)也有時很愜意(沒有專案)，我永遠忘不了大一時的男生宿舍，在資管系的薰陶下也漸漸對程式得心應手.....嗎?</p>
+            </div>
+
+            <div class="l2">
+                <center>
+                    <div class="start">
+                        <h1>What I do</h1>
+                    </div>
+                </center>
+            </div>
+            <div class="j">
+                <h1>中原大學推廣處</h1>
+                <center><img src="image/work.jpg"></center>
+            </div>
+            <div class="k">
+                <a name="do">
+                    <h1>我的工作:</h1>
+                    <p>目前我在中原大學推廣處就職，這裡的工作內容主要是類似社區大學，負責幫政府的產業投資人才計畫招募學生，並管理學生的種種事務，並向勞動部匯報。<br>
+                        雖然是校內工讀，但這份工作並不輕鬆，首先課程五花八門，需要準備的資料也是又多又繁瑣。再來是壓力算大，因為有很多資料我們是要上報給勞動部的，在面對政府部門時，幾乎不能犯錯，否則不只是被罵那麼簡單...
+                    </p>
+            </a>
+            </div>
+            <div class="end">
+                COPY RIGHT©2023陳繼禾<br>
+                phone:0984253953<br>
+                <a href="mailto:zh100g06@gmail.com">mail:zh100g06@gmail.com</a>
+            </div>
+
+            
+        </div>
+    </main>
+</body>
+</html>
